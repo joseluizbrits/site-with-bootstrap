@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './App.css'
 
-import Carro from './componentes/Carro'
+import BoxCurse from './componentes/BoxCourse'
+import StatusCourse from './componentes/StatusCourse'
+import BoxInsert from './componentes/BoxInsert'
 
 export default function App() {
 
+  let [box, setBox] = useState('')
+
   return (
     <>
-      <h1>Componentes Classe</h1>
-      <Carro fator={10}/>
+      <header>
+        <h1>Atividades 2022.1</h1>
+        <div className='status--course'>
+          <StatusCourse />
+        </div>
+        <button className='insert--button' onClick={() => setBox(box = <BoxCurse />)}>Inserir disciplina</button>
+      </header>
+      <div className='window--course'>
+        {box}
+      </div>
+      {/* <BoxInsert /> */}
     </>
   )
 }

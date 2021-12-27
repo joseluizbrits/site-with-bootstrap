@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    columns: 2;
+    height: 50px;
+    margin: 20px;
+}
+
+.status--course {
+    
+}
+
+.insert--button {
+    
+}
+
+.window--course {
+
+}
