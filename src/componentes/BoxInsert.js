@@ -1,20 +1,28 @@
-import react from 'react'
+import React from 'react'
 import './BoxInsert.css'
 
-export default function BoxInsert({ courses }) {
+export default function BoxInsert({ form, handleFormChange, getData }) {
+
+    
 
     return (
         <div className="box--insert">
             <label>Disciplina</label>
-            <input type='text' placeholder='Inserir disciplina...' value={courses[0].courseName}></input>
+
+            <input type='text' placeholder='Inserir disciplina...' name='courseName' value={form.courseName} onChange={(e) => handleFormChange(e)}></input>
+
             <label>Tarefas</label>
-            <input type='checkbox' checked='checked' id='check_fta' value={courses[0].fta}></input>
+
+            <input type='checkbox' name='check_fta' onChange={(e) => handleFormChange(e)}></input>
             <label htmlFor='check_fta'>FTA</label>
-            <input type='checkbox' id='check_a1' value={courses[0].a1}></input>
+
+            <input type='checkbox' name='check_a1' onChange={(e) => handleFormChange(e)}></input>
             <label htmlFor='check_a1'>AIA (A1)</label>
-            <input type='checkbox' id='check_a2' value={courses[0].a2}></input>
+
+            <input type='checkbox' name='check_a2' onChange={(e) => handleFormChange(e)}></input>
             <label htmlFor='check_a2'>AIA (A2)</label>
-            <button onClick=''>Inserir</button>
+
+            <button onClick={() => getData()}>Inserir</button>
         </div>
     )
 }
