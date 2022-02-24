@@ -1,0 +1,48 @@
+.album .card {
+    width: 222px;
+}
+
+.album .card #img-1 {
+    background: url("../../images/imagem-formal.png") center center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 200px;
+}
+
+.album .card #img-2 {
+    background: url("../../images/imagem-informal.jpg") center center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 200px;
+}
+
+.album .card #img-3 {
+    background: url("../../images/imagem-mustache.jpg") center center no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 200px;
+}
+
+@media (max-width: 576px) {
+    .album .card {
+        width: 300px;
+    }
+
+    .album .card #img-1,
+    .album .card #img-2,
+    .album .card #img-3 {
+        width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .album .card {
+        width: 300px;
+    }
+
+    .album .card #img-1,
+    .album .card #img-2,
+    .album .card #img-3 {
+        width: 300px;
+    }
+}
